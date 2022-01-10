@@ -1,0 +1,5 @@
+autopep8==1.6.0
+Django==4.0.1
+Pillow==9.0.0
+pyclean==2.0.0
+python-decouple==3.5
