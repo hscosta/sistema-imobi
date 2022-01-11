@@ -9,10 +9,13 @@ from django.contrib.messages import constants
 
 # cadastro.index
 def index(request):
+
     if request.method == 'GET':
         if request.user.is_authenticated:
             return redirect('/')
+
         return render(request, 'autenticacao/cadastro.html')
+
     elif request.method == 'POST':
         username = request.POST['username']
         email = request.POST['email']

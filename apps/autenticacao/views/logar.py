@@ -5,11 +5,15 @@ from django.contrib.messages import constants
 from django.contrib import auth
 
 
+# logar.index
 def index(request):
+
     if request.method == 'GET':
         if request.user.is_authenticated:
             return redirect('/')
+
         return render(request, 'autenticacao/logar.html')
+
     elif request.method == 'POST':
         username = request.POST.get('username')
         senha = request.POST.get('senha')
@@ -23,5 +27,3 @@ def index(request):
         else:
             auth.login(request, usuario)
             return redirect('/')
-
-        return HttpResponse(f'Username: {username} - senha: {senha}')
