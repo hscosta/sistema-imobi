@@ -131,3 +131,4 @@ dmypy.json
 # adicionados para não serem versionados
 MANIFEST
 .vscode
+aux
