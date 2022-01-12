@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# adicionados para não serem versionados
+MANIFEST
+.vscode
